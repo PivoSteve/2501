@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terminal</title>
+    <link rel="stylesheet" href="../data/styles.css">
+    <script type="module" src="../data/javascript/terminal.js"></script>
+</head>
+<body>
+    <div class="container_info">
+        <h1>Pseudo-Terminal</h1>
+        <button class="home-button" id="home-button">🏠︎</button>        
+        <button class="reload-button" id="reload-button">⟳</button>
+    </div>
+    
+    <div class="terminal">
+        <div class="terminal-output" id="terminal-output"></div>
+        <div class="terminal-input">
+            <input type="text" id="terminal-input" class="terminal-input-field" placeholder="Enter your command here">
+            <button class="terminal-submit-button" id="terminal-submit-button">▶</button>
+        </div>
+    </div>
+
+    <div class="sidebar-settings" id="sidebar-settings">
+        <h2>Settings</h2>    
+        <div class="checkbox-container">
+            <label class="custom-checkbox">
+                <input type="checkbox" id="prompt-checkbox">
+                <div class="checkbox__checkmark"></div>
+                <div class="checkbox__body">Enable custom prompt</div>
+            </label>
+        </div>
+        <input type="text" id="prompt" class="terminal-input-field" placeholder="Custom prompt ($, ~, etc)">
+    </div>
+
+    <div class="listbar" id="listbar">  
+        <hr></hr>
+        <button class="listbar-button" id="settings">⚙️</button>
+        <button class="listbar-button" id="socials">💭</button>
+    </div>
+    <button class="toggle-button" id="toggle-button">☰</button>
+</body>
+</html>

@@ -1,0 +1,438 @@
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    transition: opacity 0.5s ease;
+}
+
+body.hidden {
+    opacity: 0;
+}
+
+.container_info {
+    position: relative;
+    width: 50%;
+    text-align: center;
+    margin: auto;
+    padding: 20px;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+h1, h2, h3 {
+    color: #ffffff;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+code {
+    background-color: #272727;
+    color: #e0e0e0;
+    border-radius: 3px;
+    width: 600px;
+    text-decoration: none;
+}
+
+pre {
+    background-color: #272727;
+    color: #e0e0e0;
+    padding: 5px 30px;
+    border-radius: 10px;
+}
+
+.portfolio-container {
+    width: 800px;
+    height: 250px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+    overflow: auto;
+}
+
+.portfolio-item {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.portfolio-item h3,
+.portfolio-item p {
+    margin: 0;
+}
+
+.portfolio-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+@media only screen and (max-width: 768px) {
+    .portfolio-container {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .portfolio-item {
+        position: relative;
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .portfolio-item img {
+        width: 100%;
+        height: auto;
+        border-radius: 15px;
+        margin-bottom: 5px;
+    }
+
+    .portfolio-item h3 {
+        position: absolute;
+        color: #fff;
+        bottom: -.5em;
+        font-size: 16px;
+    }
+    
+    .portfolio-item p {
+        position: absolute;
+        bottom: 5px;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 15px;
+        margin: 0;
+        color: #fff;
+        font-size: 16px;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        margin-bottom: 5px;
+    }
+}
+
+
+.button {
+    background-color: #ffffff;
+    color: #121212;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.button:hover {
+    background-color: #a8a8a8;
+    text-decoration: none;
+}
+
+.sidebar-creations {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 250px;
+    height: 320px;
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    padding: 25px;
+    padding-right: 80px;
+    border-radius: 10px;
+    transition: right 0.15s ease-in-out;
+}
+
+.sidebar-creations h2 {
+    color: #ffffff;
+}
+
+.sidebar-creations.open {
+    right: 0;
+}
+
+.sidebar-settings {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 250px;
+    height: 320px;
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    padding: 25px;
+    padding-right: 80px;
+    border-radius: 10px;
+    transition: right 0.15s ease-in-out;
+}
+
+.sidebar-settings h2 {
+    color: #ffffff;
+}
+
+.sidebar-settings.open {
+    right: 0;
+}
+
+.toggle-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #ffffff;
+    color: #121212;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.toggle-button:hover {
+    background-color: #a8a8a8;
+    text-decoration: none;
+}
+
+.home-button {
+    position: absolute;
+    top: 50%;
+    left: -45px;
+    transform: translateY(-50%);
+    background-color: #ffffff;
+    color: #121212;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 5px;
+}
+
+.home-button:hover {
+    background-color: #a8a8a8;
+    text-decoration: none;
+}
+
+.reload-button {
+    position: absolute;
+    top: 50%;
+    left: -80px;
+    transform: translateY(-50%);
+    background-color: #ffffff;
+    color: #121212;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 5px;
+}
+
+.reload-button:hover {
+    background-color: #a8a8a8;
+    text-decoration: none;
+}
+
+.creations-button {
+    position: relative;
+    transform: translateY(-50%);
+    background-color: #ffffff;
+    color: #121212;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 5px;
+}
+
+.creations-button:hover {
+    background-color: #a8a8a8;
+    text-decoration: none;
+}
+
+.listbar {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 30px;
+    height: 320px;
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    padding: 25px;
+    padding-right: 80px;
+    border-radius: 10px;
+    transition: right 0.25s ease-in-out;
+}
+
+.listbar hr {
+    margin-top: 55px;
+    width: 125%;
+}
+
+.listbar h2 {
+    color: #ffffff;
+}
+
+.listbar.open {
+    right: -50px;
+}
+
+.listbar-button {
+    position: relative;
+    bottom: -15px;
+    margin-bottom: 10px;
+    background-color: #ffffff;
+    color: #121212;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.listbar-button:hover {
+    background-color: #a8a8a8;
+}
+
+.terminal {
+    position: relative;
+    width: 80%;
+    margin: 20px auto;
+}
+
+.terminal-output {
+    background-color: #272727;
+    color: #e0e0e0;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    overflow-y: auto;
+    height: 30vh;
+}
+
+.terminal-output-text {
+    color: #ffffff;
+    margin-top: -5px;
+}
+
+.terminal-input {
+    display: flex;
+}
+
+.terminal-input-field {
+    flex: 1;
+    background-color: #272727;
+    color: #e0e0e0;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.terminal-submit-button {
+    background-color: #ffffff;
+    color: #121212;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-left: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.terminal-submit-button:hover {
+    background-color: #a8a8a8;
+}
+
+.custom-checkbox {
+    display: inline-block;
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.custom-checkbox input {
+    position: relative;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.custom-checkbox input:checked ~ .checkbox__checkmark {
+    background-color: #fff;
+}
+.custom-checkbox input:checked ~ .checkbox__checkmark:after {
+    opacity: 1;
+}
+.custom-checkbox:hover input ~ .checkbox__checkmark {
+    background-color: #eee;
+}
+.custom-checkbox:hover input:checked ~ .checkbox__checkmark {
+    background-color: #fff;
+}
+.custom-checkbox .checkbox__checkmark {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    background-color: #fff;
+    border: 2px solid #333;
+    transition: background-color 0.25s ease;
+    border-radius: 4px;
+}
+.custom-checkbox .checkbox__checkmark:after {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 1px;
+    width: 5px;
+    height: 10px;
+    border: solid #333;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    opacity: 0;
+    transition: opacity 0.25s ease;
+}
+.custom-checkbox .checkbox__body {
+    margin-bottom: 15px; 
+    color: #e0e0e0;
+    line-height: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+.checkbox-container {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+#prompt {
+    flex: 1;
+    width: 80%;
+    background-color: #272727;
+    color: #e0e0e0;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}

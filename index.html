@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/data/styles.css">
+</head>
+<body>
+    <div class="container_info">
+        <h1>Syra Developer</h1>
+        <button class="home-button" id="home-button">🏠︎</button>
+        <button class="reload-button" id="reload-button">⟳</button>
+    </div>
+    <div class="container">
+        <hr></hr>
+        <pre><code>
+[syra@archlinux ~]$ sudo rm rf /*
+[sudo] password for syra: █
+        </pre></code>
+        &nbsp;
+        <hr></hr>
+        <pre><code>
+#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    cout &lt;&lt; "Welcome!";
+    system("pause");
+    return 0;
+}
+        </pre></code>
+        <hr></hr>
+        &nbsp;
+        <h2 align="center">Click on "☰" for more information...</h2>
+    </div>
+    <div class="container">
+        <div class="portfolio-container">
+            <div class="portfolio-item">
+                <img src="https://placehold.co/800x400/EEE/31343C?font=montserrat&text=Portfolio Item 1" alt="Portfolio Item 1">
+                <h3>Pseudo-Terminal</h3> 
+                <p>A web Pseudo-Terminal with simple commands and customization</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://placehold.co/800x400/EEE/31343C?font=montserrat&text=Portfolio Item 2" alt="Portfolio Item 2">
+                <h3>placeholder</h3>
+                <p>placeholder but longer than previous placeholder, todo</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="sidebar-creations" id="sidebar-creations">
+        <h1>Creations</h1>
+        <a href="./pseudoterminal" class="creations-button">Pseudo-Terminal</a>
+    </div>
+
+    <div class="listbar" id="listbar">  
+        <hr></hr>
+        <button class="listbar-button" id="creations">🧸</button>
+        <button class="listbar-button" id="socials">💭</button>
+    </div>
+    <button class="toggle-button" id="toggle-button">☰</button>
+    <script type="module" src="/data/javascript/main.js"></script>
+</body>
+</html>
