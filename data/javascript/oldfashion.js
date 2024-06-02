@@ -1,0 +1,1 @@
+import '../oldfashion/javascript/buttons.js';

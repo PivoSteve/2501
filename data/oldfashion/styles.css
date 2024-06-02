@@ -1,0 +1,298 @@
+.container {
+    width: 55%;
+    height: 100%;
+    margin: auto;
+    padding: 20px;
+    background-color: #006128;
+    border-width: 10px;
+    border-block: 10px;
+    border-color: #003d19;
+}
+
+.dancinggirl {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    top: 0;
+    margin: 20px -450px;
+    padding: 40px;
+}
+
+h1, h2, h3 {
+    color: #ffffff;
+}
+
+a:link {
+	color: #003d19;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #003d19;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #003d19;
+	text-decoration: none;
+}
+
+h2.date-header {
+	margin: .1em 0 0;
+	padding: 0;
+	font-size: 90%;
+	color: #003d19;
+	padding: 10px;
+	float: right;
+	font-family: verdana;
+}
+
+.post {
+	margin: .5em 0 1em;
+	padding-bottom: 5em;
+	background: url('/data/images/code.gif') bottom left no-repeat;
+}
+
+.post h3 {
+	margin: .5em 0;
+	padding: 0px 0 0px;
+	font-size: 115%;
+	font-weight: bold;
+	line-height: 1.0em;
+	color: #fff;
+	background: #003d19;
+	border: 1px solid #003d19;
+	font-family: verdana;
+}
+
+.post h3 a,
+.post h3 a:visited,
+.post h3 strong {
+	display: block;
+	font-size: 100%;
+	text-decoration: none;
+	color: #fff;
+	font-weight: normal;
+	padding: 5px;
+	font-weight: bold;
+}
+
+.post h3 strong,
+.post h3 a:hover {
+	color: #003d19;
+	text-decoration: none;
+}
+
+.post-body,
+.post-body p {
+	margin: 0;
+	padding: 0;
+	line-height: 1.3em;
+}
+
+.post-footer {
+	margin: .5em 3 5px;
+	color: #000;
+	letter-spacing: .0em;
+	font-size: 70%;
+    line-height: .5em;
+	border-bottom: 8px groove;
+	background: url("https://web.archive.org/web/20100208030051im_/http://i228.photobucket.com/albums/ee199/femikey/pinkheart.gif") no-repeat;
+	padding-left: 35px;
+}
+
+.post-footer p {
+	margin: 0;
+	padding: 0 0 4px;
+	line-height: 1.4em;
+}
+
+.comment-link {
+	margin-left: .6em;
+	background: url("https://web.archive.org/web/20100208030051im_/http://i370.photobucket.com/albums/oo144/chic-design/fecomments_add.png") no-repeat;
+	padding-left: 18px;
+}
+
+.post-body img {
+	margin: 5px;
+	padding: 1px;
+	border: 0px solid #35CE9A;
+}
+
+.post blockquote {
+	margin: 1em 12px;
+	padding-left: 12px;
+	border-left: 4px solid #C12267;
+	color: #C12267;
+}
+
+/* Comments
+----------------------------------------------- */
+#comments h4 {
+	margin: 1em 0;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 1.4em;
+	text-transform: uppercase;
+	letter-spacing: .2em;
+	color: #fff;
+}
+
+#comments-block {
+	margin: 1em 0 1.5em;
+	line-height: 1.6em;
+}
+
+#comments-block .comment-author {
+	margin: .5em 0;
+}
+
+#comments-block .comment-body {
+	margin: .25em 0 0;
+}
+
+#comments-block .comment-footer {
+	margin: -.25em 0 2em;
+	line-height: 1.4em;
+	text-transform: uppercase;
+	letter-spacing: .1em;
+}
+
+#comments-block .comment-body p {
+	margin: 0 0 .75em;
+}
+
+.deleted-comment {
+	font-style: italic;
+	color: gray;
+}
+
+#blog-pager-newer-link {
+	float: left;
+}
+
+#blog-pager-older-link {
+	float: right;
+}
+
+#blog-pager {
+	text-align: center;
+}
+
+.feed-links {
+	clear: both;
+	line-height: 2.5em;
+}
+
+/* Sidebar Content
+----------------------------------------------- */
+#sidewrapper-left,
+#sidewrapper-right {
+	line-height: 1.2em;
+}
+
+#sidewrapper-left p,
+#sidewrapper-right p {
+	margin: 0;
+	padding: 5px 0 0 8px;
+}
+
+#sidewrapper-left ul,
+#sidewrapper-right ul {
+	list-style: none;
+	margin: 0 0 0;
+	padding: 0 0 8px;
+}
+
+#sidewrapper-left li,
+#sidewrapper-right li {
+	margin: 0;
+	background: url("/web/20100208030051im_/http://www.rosilie.blogspot.com/") no-repeat;
+	padding: .1em 0px .22em 18px;
+	line-height: 1.0em;
+}
+
+#sidewrapper-left .widget,
+#sidewrapper-right .widget,
+.main .widget {
+	margin: 0;
+	padding: 0px;
+}
+
+.sidebar section {
+	margin: 0;
+	padding: 0px;
+}
+
+.main .Blog {
+	border-bottom-width: 0;
+}
+
+#ArchiveList {
+	padding-left: -2px;
+}
+
+/* Profile
+----------------------------------------------- */
+.profile-img {
+	float: left;
+	margin: 0 5px 5px 0;
+	padding: 1px;
+	border: 1px solid #C12267;
+}
+
+.profile-data {
+	margin: 0;
+	letter-spacing: .1em;
+	font-size: 90%;
+	font-weight: bold;
+	line-height: 1.4em;
+}
+
+.profile-datablock {
+	margin: .5em 0 .5em .5em;
+}
+
+.profile-textblock {
+	margin: 0.5em;
+	line-height: 1.6em;
+}
+
+.profile-link {
+	font-size: 90%;
+	letter-spacing: .1em;
+	margin: 0 0 1em .5em;
+}
+
+/* Footer
+----------------------------------------------- */
+#footer-wrapper {
+	background: url("https://web.archive.org/web/20100208030051im_/http://i228.photobucket.com/albums/ee199/femikey/rosilie_footer.png");
+	width: 985px;
+	clear: both;
+	margin: 0 auto;
+	text-align: center;
+	padding: 0px;
+	height: 101px;
+}
+
+#footer-wrapper a {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+#footer {
+	margin: 0 auto;
+	padding: 0px 0px;
+	clear: both;
+	line-height: 1.2em;
+	letter-spacing: .1em;
+	text-align: center;
+	color: #819032;
+}
+
+.credits {
+	margin: 0;
+	padding: 5px 0 0;
+	font-size: 75%;
+}

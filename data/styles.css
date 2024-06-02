@@ -11,10 +11,20 @@ body.hidden {
     opacity: 0;
 }
 
+/* Chromium */
+html::-webkit-scrollbar {width: 8px; height: 8px;}
+html::-webkit-scrollbar-track {background: #121212; border-radius: 10px;}
+html::-webkit-scrollbar-thumb {background: #9c9c9c;border-radius: 10px;} 
+html::-webkit-scrollbar-thumb:hover {background: #8d8d8d;}
+
+/* Firefox */
+html {scrollbar-width: thin; scrollbar-color: #9c9c9c #121212;}
+
 .container_info {
     position: relative;
     width: 50%;
     text-align: center;
+    top: 10px;
     margin: auto;
     padding: 20px;
     background-color: #1e1e1e;
@@ -60,10 +70,9 @@ pre {
 
 .portfolio-container {
     width: 800px;
-    height: 250px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 50px;
     overflow: auto;
 }
 
