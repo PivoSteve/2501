@@ -26,6 +26,10 @@ document.getElementById('reload-button').addEventListener('click', function() {
 document.getElementById('home-button').addEventListener('click', function() {
     document.querySelector('body').classList.add('hidden');
     setTimeout(function() {
-        location.href = '/';
+        if (location.pathname === '/2501/pseudoterminal/' || location.pathname === '/2501/') {        
+            location.href = '/2501/';
+        } else {
+            location.href = '/';
+        }
     }, 500);
 });
