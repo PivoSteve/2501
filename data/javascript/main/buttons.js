@@ -19,10 +19,16 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     document.getElementById('login').addEventListener('click', function() {
+        if (sidebarlogin.classList.contains('open')) {
+            localStorage.setItem("sidebarOpen", "false");
+        }
         sidebarlogin.classList.toggle('open');
     });
 
     document.getElementById('socials').addEventListener('click', function() {
+        if (sidebarlogin.classList.contains('open')) {
+            localStorage.setItem("sidebarOpen", "false");
+        }
         sidebarlogin.classList.toggle('open');
     });
 
@@ -65,6 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const username = document.getElementById("login-username").value;
         localStorage.setItem("logined", "true");
         localStorage.setItem("username", username);
+        localStorage.setItem("sidebarOpen", "true");
         document.getElementById("login-username").value = '';
         document.querySelector('body').classList.add('hidden');
         setTimeout(function() {
