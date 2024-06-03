@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById('home-button').addEventListener('click', function() {
         document.querySelector('body').classList.add('hidden');
         setTimeout(function() {
-            if (location.pathname === '/2501/pseudoterminal/' || location.pathname === '/2501/') {        
+            if (location.pathname === '/2501/') {        
                 location.href = '/2501/';
             } else {
                 location.href = '/';

@@ -21,6 +21,21 @@
             <button class="terminal-submit-button" id="terminal-submit-button" title="Send">▶</button>
         </div>
     </div>
+    
+    <div class="sidebar-login" id="sidebar-login">
+        <h1 id="login-title">Login</h1>
+        <form id="login-form">
+            <label for="login-username">Username:</label>
+            <input type="text" id="login-username" class="login-input-field" name="username" required>
+            <button type="submit" class="login-button" title="Login">▶</button>
+        </form>
+        <h1 id="profile">Profile <button id="logoutButton" class="logout-button" title="Logout">◀</button></h1>
+        <p id="profile-username"></p>
+        <p id="current-time"></p>
+        <input type="text" id="messageInput" class="contact-input-field" placeholder="Contact with me now!">
+        <button id="sendMessageButton" class="contact-submit-button" title="Send">▶</button>
+        <p id="warning">The login is just a visual identifier for your session. Your login is not encrypted or protected in any way. Anyone can log in using your username.</p>
+    </div>
 
     <div class="sidebar-settings" id="sidebar-settings">
         <h2>Settings</h2>    
@@ -36,6 +51,7 @@
 
     <div class="listbar" id="listbar">  
         <hr></hr>
+        <button class="listbar-button" id="login" title="Profile">🧸</button>
         <button class="listbar-button" id="settings" title="Settings">⚙️</button>
         <button class="listbar-button" id="socials" title="Socials">💭</button>
     </div>
