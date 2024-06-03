@@ -134,15 +134,16 @@ export function sendMessage() {
         embeds: [{
             title: "Message from portfolio webhook:",
             description: message,
-            url: "https://pivosteve.github.io/2501/",
-            color: 16448250,
+            color: hexToDecimal(stringToColor(message)),
             author: {
-                name: username
+                name: "Sended by \"" + username + "\"",
+                url: "https://pivosteve.github.io/2501/"
             },
             footer: {
                 text: new Date().toLocaleString()
             }
-        }]
+        }],
+        username: username,
     };
     
 
@@ -152,7 +153,7 @@ export function sendMessage() {
     var timeLeft = 16;
     var interval = setInterval(function() {
         timeLeft--;
-        sendMessageButton.textContent = "Cooldown: " + timeLeft + "s";
+        sendMessageButton.textContent = timeLeft + "s";
 
         if (timeLeft <= 0) {
             clearInterval(interval);
@@ -164,4 +165,19 @@ export function sendMessage() {
     sendMessageButton.textContent = "▶";
 }
 
+function stringToColor(str) {
+    let hash = 0;
+    for (let i = 0; i < str.length; i++) {
+        hash = str.charCodeAt(i) + ((hash << 5) - hash);
+    }
+    let color = '#';
+    for (let j = 0; j < 3; j++) {
+        let value = (hash >> (j * 8)) & 0xFF;
+        color += ('00' + value.toString(16)).substr(-2);
+    }
+    return color;
+}
 
+function hexToDecimal(hex) {
+    return parseInt(hex.replace(/^#/, ''), 16);
+}
