@@ -1,13 +1,11 @@
 body {
     background-image: url('/data/images/estrelas10.gif');
-    background-size: 100%;
-    background-repeat: no-repeat;
-    color: #e0e0e0;
+    color: #ffffff;
     font-family: 'Comic Sans MS', sans-serif;
 }
 
 .container {
-    width: 55%;
+    width: 45%;
     height: 100%;
     margin: auto;
     padding: 20px;
