@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     var sidebarsettings = document.getElementById('sidebar-settings');
+    var sidebarsocials = document.getElementById('sidebar-socials');
     var sidebarlogin = document.getElementById('sidebar-login');
     var listbar = document.getElementById('listbar');   
     var loginTitle = document.getElementById("login-title");
@@ -26,8 +27,8 @@ document.addEventListener("DOMContentLoaded", () => {
         if (sidebarsettings.classList.contains('open')) {
             sidebarsettings.classList.remove('open');
         }
-        if (document.getElementById('socials').classList.contains('open')) {
-            document.getElementById('socials').classList.remove('open');
+        if (sidebarsocials.classList.contains('open')) {
+            sidebarsocials.classList.remove('open');
         }
         sidebarlogin.classList.toggle('open');
     });
@@ -36,8 +37,8 @@ document.addEventListener("DOMContentLoaded", () => {
         if (sidebarlogin.classList.contains('open')) {
             sidebarlogin.classList.remove('open');
         }
-        if (document.getElementById('socials').classList.contains('open')) {
-            document.getElementById('socials').classList.remove('open');
+        if (sidebarsocials.classList.contains('open')) {
+            sidebarsocials.classList.remove('open');
         }
         sidebarsettings.classList.toggle('open');
     });
@@ -49,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (sidebarsettings.classList.contains('open')) {
             sidebarsettings.classList.remove('open');
         }
-        sidebarlogin.classList.toggle('open');
+        sidebarsocials.classList.toggle('open');
     });
 
     document.getElementById('reload-button').addEventListener('click', function() {
