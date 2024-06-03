@@ -16,6 +16,9 @@ document.addEventListener("DOMContentLoaded", () => {
         if (sidebarlogin.classList.contains('open')) {
             sidebarlogin.classList.remove('open');
             localStorage.setItem("sidebarOpen", "false");
+        } else if (sidebarsettings.classList.contains('open')) {
+            sidebarsettings.classList.remove('open');
+            localStorage.setItem("sidebarOpen", "false");
         }
     });
 

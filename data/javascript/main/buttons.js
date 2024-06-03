@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     var sidebarlogin = document.getElementById('sidebar-login');
+    var sidebarsocials = document.getElementById('sidebar-socials');
     var listbar = document.getElementById('listbar');   
     var loginTitle = document.getElementById("login-title");
     var loginForm = document.getElementById("login-form");
@@ -15,11 +16,15 @@ document.addEventListener("DOMContentLoaded", () => {
         if (sidebarlogin.classList.contains('open')) {
             sidebarlogin.classList.remove('open');
             localStorage.setItem("sidebarOpen", "false");
+        } else if (sidebarsocials.classList.contains('open')) {
+            sidebarsocials.classList.remove('open');
+            localStorage.setItem("sidebarOpen", "false");
         }
     });
 
     document.getElementById('login').addEventListener('click', function() {
-        if (sidebarlogin.classList.contains('open')) {
+        if (sidebarsocials.classList.contains('open')) {
+            sidebarsocials.classList.remove('open');
             localStorage.setItem("sidebarOpen", "false");
         }
         sidebarlogin.classList.toggle('open');
@@ -27,9 +32,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.getElementById('socials').addEventListener('click', function() {
         if (sidebarlogin.classList.contains('open')) {
+            sidebarlogin.classList.remove('open');
             localStorage.setItem("sidebarOpen", "false");
         }
-        sidebarlogin.classList.toggle('open');
+        sidebarsocials.classList.toggle('open');
     });
 
     document.getElementById('reload-button').addEventListener('click', function() {
@@ -99,9 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
             currentTime.textContent = `Current time: ${new Date().toLocaleString()}`;
         }, 1000);
     }
-});
-    
-
+}); 
 
 export function sendMessage() {
     var messageInput = document.getElementById("messageInput");
