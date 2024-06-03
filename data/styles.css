@@ -137,6 +137,21 @@ pre {
 }
 
 
+.logout-button {
+    background-color: #ffffff;
+    color: #121212;
+    padding: 2.5px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.logout-button:hover {
+    background-color: #a8a8a8;
+    text-decoration: none;
+}
+
 .button {
     background-color: #ffffff;
     color: #121212;
@@ -152,7 +167,7 @@ pre {
     text-decoration: none;
 }
 
-.sidebar-creations {
+.sidebar-login {
     position: fixed;
     top: 0;
     right: -100%;
@@ -167,11 +182,27 @@ pre {
     transition: right 0.15s ease-in-out;
 }
 
-.sidebar-creations h2 {
+.sidebar-login #warning {
+    position: relative;
+    bottom: 5px;
+    left: 0;
+    padding-top: 5px;
+    margin-right: 25px;
+    color: #fff;
+    font-size: 11px;
+    text-shadow: .1px -.5px 0px #ffffff;
+}
+
+.sidebar-login #profile {
+    color: #ffffff;
+    display: none;
+}
+
+.sidebar-login h2 {
     color: #ffffff;
 }
 
-.sidebar-creations.open {
+.sidebar-login.open {
     right: 0;
 }
 
@@ -254,7 +285,7 @@ pre {
     text-decoration: none;
 }
 
-.creations-button {
+.login-button {
     position: relative;
     transform: translateY(-50%);
     background-color: #ffffff;
@@ -266,7 +297,7 @@ pre {
     border-radius: 5px;
 }
 
-.creations-button:hover {
+.login-button:hover {
     background-color: #a8a8a8;
     text-decoration: none;
 }
@@ -366,6 +397,33 @@ pre {
 .terminal-submit-button:hover {
     background-color: #a8a8a8;
 }
+
+.contact-input-field {
+    flex: 1;
+    background-color: #272727;
+    color: #e0e0e0;
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.contact-submit-button {
+    background-color: #ffffff;
+    width: 50%;
+    color: #121212;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.contact-submit-button:hover {
+    background-color: #a8a8a8;
+}
+
 
 .custom-checkbox {
     display: inline-block;

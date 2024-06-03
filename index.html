@@ -9,8 +9,8 @@
 <body>
     <div class="container_info">
         <h1>Syra Developer</h1>
-        <button class="home-button" id="home-button">🏠︎</button>
-        <button class="reload-button" id="reload-button">⟳</button>
+        <button class="home-button" id="home-button" title="Home">🏠︎</button>
+        <button class="reload-button" id="reload-button" title="Reload">⟳</button>
     </div>
     <div class="container">
         <hr></hr>
@@ -55,17 +55,27 @@ int main() {
         </div>
     </div>
 
-    <div class="sidebar-creations" id="sidebar-creations">
-        <h1>Creations</h1>
-        <a href="./pseudoterminal" class="creations-button">Pseudo-Terminal</a>
+    <div class="sidebar-login" id="sidebar-login">
+        <h1 id="login-title">Login</h1>
+        <form id="login-form">
+            <label for="login-username">Username:</label>
+            <input type="text" id="login-username" name="username" required>
+            <button type="submit" title="Login">▶</button>
+        </form>
+        <h1 id="profile">Profile <button id="logoutButton" class="logout-button" title="Logout">◀</button></h1>
+        <p id="profile-username"></p>
+        <p id="current-time"></p>
+        <input type="text" id="messageInput" class="contact-input-field" placeholder="Contact with me now!">
+        <button id="sendMessageButton" class="contact-submit-button" title="Send">▶</button>
+        <p id="warning">The login is just a visual identifier for your session. Your login is not encrypted or protected in any way. Anyone can log in using your username.</p>
     </div>
-
+    
     <div class="listbar" id="listbar">  
         <hr></hr>
-        <button class="listbar-button" id="creations">🧸</button>
-        <button class="listbar-button" id="socials">💭</button>
+        <button class="listbar-button" id="login" title="Profile">🧸</button>
+        <button class="listbar-button" id="socials" title="Socials">💭</button>
     </div>
-    <button class="toggle-button" id="toggle-button">☰</button>
+    <button class="toggle-button" id="toggle-button" title="Sidebar">☰</button>
     <script type="module" src="data/javascript/main.js"></script>
 </body>
 </html>
