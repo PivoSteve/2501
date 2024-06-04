@@ -7,6 +7,9 @@ export function handleCommand(command, displayOutput, terminalInput, terminalOut
         case 'help':
             showHelp(displayOutput);
             break;
+        case 'neofetch':
+            displayOutput(command, neofetch());
+            break;
         case 'clear':
             clearTerminal(terminalOutput);
             break;
@@ -30,7 +33,7 @@ export function handleCommand(command, displayOutput, terminalInput, terminalOut
             displayOutput(command, calculate(commandArgs.join('')));
             break;
         case 'who':
-            displayOutput(command, `user1&nbsp;&nbsp;&nbsp;&nbsp;console&nbsp;&nbsp;&nbsp;&nbsp;${new Date().toLocaleString()}`);
+            displayOutput(command, `${getUser()}&nbsp;&nbsp;&nbsp;&nbsp;pseudo&nbsp;&nbsp;&nbsp;&nbsp;${new Date().toLocaleString()}`);
             break;
         case 'reverse':
             displayOutput(command, commandArgs.join(' ').split('').reverse().join(''));
@@ -145,6 +148,8 @@ function executeCommand(commandName, commandArgs) {
     switch (commandName) {
         case 'help':
             return "You cannot use 'help' in this way";
+        case 'neofetch':
+            return neofetch();
         case 'exit':
             return "You cannot use 'exit' in this way";
         case 'calc':
@@ -166,4 +171,42 @@ function executeCommand(commandName, commandArgs) {
         default:
             return `Command not found: ${commandName}`;
     }
+}
+
+function neofetch() {
+    const screenWidth = window.innerWidth;
+    const screenHeight = window.innerHeight;
+    const systemInfo = [
+        `${getUser()}@PseudoTerminal`,
+        '------------------',
+        'OS: PseudoTerminal',
+        `Host: ${window.location.hostname + location.pathname}`,
+        'Kernel: 10.0.19044.0',
+        `Uptime: ${getUptime()}`,
+        'Shell: pseudo',
+        `Resolution: ${screenWidth}x${screenHeight}`,
+        `Terminal: PseudoTerminal`,
+        `Disk: 20MiB / 20MiB (100%)`,
+    ];
+
+    return systemInfo.join('<br>');
+}
+
+function getUser() {
+    if (localStorage.getItem('logined') === "true") {
+        return localStorage.getItem('username');
+    } else {
+        return 'user1';
+    }
+}
+
+function getUptime() {
+    const now = Date.now();
+    const seconds = Math.floor((now - performance.timing.navigationStart) / 1000);
+    const days = Math.floor(seconds / (3600 * 24));
+    const hours = Math.floor((seconds % (3600 * 24)) / 3600);
+    const minutes = Math.floor((seconds % 3600) / 60);
+    const remainingSeconds = seconds % 60;
+
+    return `${days} days ${hours} hours ${minutes} minutes ${remainingSeconds} seconds`;
 }
